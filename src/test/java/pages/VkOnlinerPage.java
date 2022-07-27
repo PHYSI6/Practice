@@ -21,6 +21,7 @@ public class VkOnlinerPage extends BasePage{
     @Step("Check if page is opened")
     public VkOnlinerPage checkIfVkPageOpen(){
         Selenide.switchTo().window(1);
+        takeScreenshot();
         assertTrue(pageIsOpened());
         assertEquals("onlíner",pageName.getText());
         return this;
